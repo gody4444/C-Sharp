@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F967B8C1-825C-4C68-A00D-DBB076916D0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WF</RootNamespace>
+    <AssemblyName>WF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\CommonProcess.Designer.cs">
+      <DependentUpon>CommonProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ListItem.cs" />
+    <Compile Include="Common\TabControl_Comm.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\DataBaseDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\DataBaseDetail.Designer.cs">
+      <DependentUpon>DataBaseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\DataBaseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\DataBaseList.Designer.cs">
+      <DependentUpon>DataBaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\TableCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\TableCompare.Designer.cs">
+      <DependentUpon>TableCompare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\TableResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\TableResult.Designer.cs">
+      <DependentUpon>TableResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\TableResult_Diff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Table\TableResult_Diff.Designer.cs">
+      <DependentUpon>TableResult_Diff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\TableResult_Loss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\TableResult_Loss.Designer.cs">
+      <DependentUpon>TableResult_Loss.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Common\CommonProcess.resx">
+      <DependentUpon>CommonProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Setting\DataBaseDetail.resx">
+      <DependentUpon>DataBaseDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\DataBaseList.resx">
+      <DependentUpon>DataBaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\TableCompare.resx">
+      <DependentUpon>TableCompare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\TableResult.resx">
+      <DependentUpon>TableResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\TableResult_Diff.resx">
+      <DependentUpon>TableResult_Diff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\TableResult_Loss.resx">
+      <DependentUpon>TableResult_Loss.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{98c58613-37ec-4c3e-8a51-8f27e3dc3cdd}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5fa6ecd0-ad0d-4afa-9642-3c1df4fc5aed}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+      <Project>{d2c1423c-f407-4bf5-a91e-9692aecd2cdd}</Project>
+      <Name>DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{1c867b9a-dd9b-400d-add4-8447533df456}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{e9bb4a46-06be-48f5-bd5d-25a5afc8a77d}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OracleDAL\OracleDAL.csproj">
+      <Project>{0accd2bb-b5bd-4a20-9153-1f999187ebe2}</Project>
+      <Name>OracleDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XMLDAL\XMLDAL.csproj">
+      <Project>{d4d3e6e5-af1a-42a6-812a-9566065a54cd}</Project>
+      <Name>XMLDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\ico_close.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

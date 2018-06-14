@@ -74,7 +74,7 @@ namespace WF.Table
             {
                 setmodel.Source.Flag = CommonConfig.DataType.XML;
                 DataBaseModel db = setbll.GetDBSetDetail(SourceVal);
-                setmodel.Source.XMLPath = db.PATH;
+                setmodel.Source.XMLPath = db.RealPATH;
             }
             else
             {
@@ -89,7 +89,7 @@ namespace WF.Table
             {
                 setmodel.Target.Flag = CommonConfig.DataType.XML;
                 DataBaseModel db = setbll.GetDBSetDetail(TargetVal);
-                setmodel.Target.XMLPath = db.PATH;
+                setmodel.Target.XMLPath = db.RealPATH;
             }
             else
             {

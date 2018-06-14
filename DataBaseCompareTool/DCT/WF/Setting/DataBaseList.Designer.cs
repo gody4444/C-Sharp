@@ -44,6 +44,7 @@
             this.USER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PWD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsCached = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RealPATH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PATH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -134,6 +135,7 @@
             this.USER,
             this.PWD,
             this.IsCached,
+            this.RealPATH,
             this.PATH});
             this.dgvSource.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSource.Location = new System.Drawing.Point(0, 0);
@@ -218,13 +220,21 @@
             this.IsCached.ReadOnly = true;
             this.IsCached.ToolTipText = "缓存";
             // 
+            // RealPATH
+            // 
+            this.RealPATH.DataPropertyName = "RealPATH";
+            this.RealPATH.HeaderText = "缓存路径";
+            this.RealPATH.Name = "RealPATH";
+            this.RealPATH.ReadOnly = true;
+            this.RealPATH.Width = 350;
+            // 
             // PATH
             // 
             this.PATH.DataPropertyName = "PATH";
-            this.PATH.HeaderText = "缓存路径";
+            this.PATH.HeaderText = "PATH";
             this.PATH.Name = "PATH";
             this.PATH.ReadOnly = true;
-            this.PATH.Width = 350;
+            this.PATH.Visible = false;
             // 
             // DataBaseList
             // 
@@ -265,7 +275,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn USER;
         private System.Windows.Forms.DataGridViewTextBoxColumn PWD;
         private System.Windows.Forms.DataGridViewTextBoxColumn IsCached;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RealPATH;
         private System.Windows.Forms.DataGridViewTextBoxColumn PATH;
-
     }
 }

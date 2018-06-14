@@ -67,21 +67,26 @@ namespace Model
             set;
         }
 
-        private string _path;
         /// <summary>
         /// 缓存文件路径
         /// </summary>
         public string PATH
         {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 物理路径
+        /// </summary>
+        public string RealPATH
+        {
             get
             {
-                return CommonConfig.basecachepath + this._path;
-            }
-            set
-            {
-                this._path = value;
+                return CommonConfig.basecachepath + this.PATH;
             }
         }
+
     }
 
 
@@ -156,7 +161,6 @@ namespace Model
             set;
         }
 
-        //private string _xmlpath;
         /// <summary>
         /// xml文件路径（缓存）
         /// </summary>
@@ -164,14 +168,6 @@ namespace Model
         {
             get;
             set;
-            //get
-            //{
-            //    return CommonConfig.basecachepath + this._xmlpath;
-            //}
-            //set
-            //{
-            //    this._xmlpath = value;
-            //}
         }
 
     }
